@@ -1,5 +1,10 @@
 const axios = require("axios");
-const { headers } = require("../auth/api");
+const { localHeaders } = require("../auth/api");
+
+const headers = {
+  "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
+  "x-rapidapi-key": process.env.X_RAPIDAPI_KEY
+};
 
 const wordsApi = axios.create({
   baseURL: "https://wordsapiv1.p.mashape.com/words/",
