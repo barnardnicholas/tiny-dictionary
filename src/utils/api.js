@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { localHeaders } = require("../auth/api");
+// const { localHeaders } = require("../auth/api");
 
 const headers = {
   "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
