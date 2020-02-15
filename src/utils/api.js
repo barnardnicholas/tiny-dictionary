@@ -15,7 +15,7 @@ const wordsApi = axios.create({
 export const getDefinitions = word => {
   console.log(process.env.X_RAPIDAPI_HOST);
   console.log(process.env.X_RAPIDAPI_KEY);
-  console.dir(process);
+  console.dir(process.env);
 
   return wordsApi.get(word).then(response => {
     return {
