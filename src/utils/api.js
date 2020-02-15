@@ -13,7 +13,6 @@ const wordsApi = axios.create({
 });
 
 export const getDefinitions = word => {
-  console.log(headers);
   return wordsApi.get(word).then(response => {
     return {
       success: true,
