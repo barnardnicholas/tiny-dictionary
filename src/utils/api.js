@@ -13,8 +13,8 @@ const wordsApi = axios.create({
 });
 
 export const getDefinitions = word => {
-  console.log(process.env.production.X_RAPIDAPI_HOST);
-  console.log(process.env.production.X_RAPIDAPI_KEY);
+  // console.log(process.env.production.X_RAPIDAPI_HOST);
+  // console.log(process.env.production.X_RAPIDAPI_KEY);
   console.dir(process.env.production);
 
   return wordsApi.get(word).then(response => {
