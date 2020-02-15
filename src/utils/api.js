@@ -2,8 +2,8 @@ const axios = require("axios");
 // const { localHeaders } = require("../auth/api");
 
 const headers = {
-  "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
-  "x-rapidapi-key": process.env.X_RAPIDAPI_KEY
+  "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+  "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY
 };
 
 const wordsApi = axios.create({
@@ -13,10 +13,8 @@ const wordsApi = axios.create({
 });
 
 export const getDefinitions = word => {
-  // console.log(process.env.production.X_RAPIDAPI_HOST);
-  // console.log(process.env.production.X_RAPIDAPI_KEY);
-  console.dir(process.env.NODE_ENV);
-
+  console.log(process.env.production.REACT_APP_RAPIDAPI_HOST);
+  console.log(process.env.production.REACT_APP_RAPIDAPI_KEY);
   return wordsApi.get(word).then(response => {
     return {
       success: true,
